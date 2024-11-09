@@ -12,6 +12,12 @@ function uploadCharacters() {
         img.src = character.image;
         img.alt = character.name;
 
+        if (character.id === 1) {
+            img.classList.add('hoverImg1');
+        } else if (character.id === 2) {
+            img.classList.add('hoverImg2');
+        }
+
         const name = document.createElement('h2');
         name.textContent = character.name;
 
