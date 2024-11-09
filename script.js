@@ -1,5 +1,6 @@
 const characters = [
-    { id: 1, name: "Charlie Brown", image: "./images/cbBW.jpg" },
+    { id: 1, name: "Charlie Brown", image: "./images/cbBW.jpg", description: "zzz" },
+    { id: 2, name: "Woodstock", image: "./images/woBW.jpg", description: "" },
 ];
 
 function uploadCharacters() {
@@ -22,12 +23,12 @@ function uploadCharacters() {
         const name = document.createElement('h2');
         name.textContent = character.name;
 
-        const button = document.createElement('button');
-        button.textContent = 'Ver Descrição';
+        const description = document.createElement('p');
+        description.textContent = character.description;
 
         characterDiv.appendChild(img);
         characterDiv.appendChild(name);
-        characterDiv.appendChild(button);
+        characterDiv.appendChild(description);
         container.appendChild(characterDiv);
     });
 }
