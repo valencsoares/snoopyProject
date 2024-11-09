@@ -12,10 +12,11 @@ function uploadCharacters() {
         img.src = character.image;
         img.alt = character.name;
 
-        if (character.id === 1) {
-            img.classList.add('hoverImg1');
-        } else if (character.id === 2) {
-            img.classList.add('hoverImg2');
+        for (let i = 1; i <= 18; i++) {
+            if (character.id === i) {
+                img.classList.add(`hoverImg${i}`); 
+                break;
+            }
         }
 
         const name = document.createElement('h2');
